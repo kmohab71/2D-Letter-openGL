@@ -17,12 +17,12 @@ typedef struct middle
 }middle;
 middle mid;
 int angle = 5;
-int rotate = 0;
+int rotate = 1;
 void init()
 {
     glClearColor (1.0, 1.0, 1.0, 0.0);
     glMatrixMode (GL_PROJECTION);        //Viewport
-    gluOrtho2D( 0.0,400.0,0.0,400.0);    //Viewport, i.e., camera position.
+    gluOrtho2D( 0.0,680,0.0,400.0);    //Viewport, i.e., camera position.
 
 }
 
@@ -111,6 +111,7 @@ int main(int argc, char** argv)
     glutInitWindowPosition (100, 100);
     glutCreateWindow (argv[0]);
     glutDisplayFunc(display);
+    glutReshapeFunc(Reshapefunc);
     glutMouseFunc(Mousefun);
     glutIdleFunc(Idlefunc);
     init ();
