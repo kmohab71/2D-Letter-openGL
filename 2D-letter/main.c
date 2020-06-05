@@ -110,6 +110,7 @@ int main(int argc, char** argv)
     glutInitWindowSize (600, 300);
     glutInitWindowPosition (100, 100);
     glutCreateWindow (argv[0]);
+    glutCreateWindow("2D K");
     glutDisplayFunc(display);
     glutReshapeFunc(Reshapefunc);
     glutMouseFunc(Mousefun);
