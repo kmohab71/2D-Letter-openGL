@@ -80,6 +80,7 @@ void Reshapefunc()
     glRotatef(angle, 0, 0, 1);
     glPushMatrix();
     glTranslatef(-mid.x, -mid.y, -1);
+    glFlush ();
 }
 void Mousefun(int btn, int state, int x, int y)
 {
@@ -99,6 +100,7 @@ void Idlefunc()
     {
         Reshapefunc();
         glutPostRedisplay();
+//        glFlush ();
     }
 }
 int main(int argc, char** argv)
@@ -109,7 +111,6 @@ int main(int argc, char** argv)
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize (600, 300);
     glutInitWindowPosition (100, 100);
-    glutCreateWindow (argv[0]);
     glutCreateWindow("2D K");
     glutDisplayFunc(display);
     glutReshapeFunc(Reshapefunc);
