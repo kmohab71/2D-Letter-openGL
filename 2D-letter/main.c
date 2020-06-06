@@ -34,41 +34,28 @@ void display()
 }
 void drawLetter()
 {
-    glBegin(GL_LINES);
-    
-    glVertex2f(mid.x-40.0, mid.y-127.5);
-    glVertex2f(mid.x-40.0, mid.y+127.5);
+    glBegin(GL_POLYGON);
+    glColor3f( 1.0, 0.0, 0.0 );
+    glVertex2f(  mid.x-40.0, mid.y-127.5 );
+    glVertex2f(  mid.x-40.0, mid.y+127.5 );
+    glVertex2f(  mid.x-20.0, mid.y+127.5 );
+    glVertex2f(  mid.x-20.0, mid.y-127.5 );
+    glEnd();
 
-    glVertex2f(mid.x-40.0, mid.y+127.5);
-    glVertex2f(mid.x-20.0, mid.y+127.5);
+    glBegin(GL_POLYGON);
+    glColor3f(   1.0,  0.0, 0.0 );
+    glVertex2f(  mid.x-20.0, mid.y+17.5  );
+    glVertex2f(  mid.x+20.0, mid.y+127.5 );
+    glVertex2f(  mid.x+40.0, mid.y+127.5 );
+    glVertex2f(  mid.x-20.0, mid.y-3.5   );
+    glEnd();
 
-    glVertex2f(mid.x-20.0, mid.y+127.5);
-    glVertex2f(mid.x-20.0, mid.y+17.5);
-
-    glVertex2f(mid.x-20.0, mid.y+17.5);
-    glVertex2f(mid.x+20.0, mid.y+127.5);
-
-    glVertex2f(mid.x+20.0, mid.y+127.5);
-    glVertex2f(mid.x+40.0, mid.y+127.5);
-
-    glVertex2f(mid.x+40.0, mid.y+127.5);
-    glVertex2f(mid.x, mid.y-2.5);
-
-    glVertex2f(mid.x, mid.y-2.5);
-    glVertex2f(mid.x+40.0, mid.y-127.5);
-
-    glVertex2f(mid.x+40.0, mid.y-127.5);
-    glVertex2f(mid.x+20.0, mid.y-127.5);
-
-    glVertex2f(mid.x+20.0, mid.y-127.5);
-    glVertex2f(mid.x-20.0, mid.y-17.5);
-
-    glVertex2f(mid.x-20.0, mid.y-17.5);
-    glVertex2f(mid.x-20.0, mid.y-127.5);
-
-    glVertex2f(mid.x-20.0, mid.y-127.5);
-    glVertex2f(mid.x-40.0, mid.y-127.5);
-    
+    glBegin(GL_POLYGON);
+    glColor3f(   1.0,  0.0, 0.0 );
+    glVertex2f(  mid.x-20.0, mid.y-17.5  );
+    glVertex2f(  mid.x+20.0, mid.y-127.5 );
+    glVertex2f(  mid.x+40.0, mid.y-127.5 );
+    glVertex2f(  mid.x-20.0, mid.y+3.5   );
     glEnd();
 
     glFlush ();
