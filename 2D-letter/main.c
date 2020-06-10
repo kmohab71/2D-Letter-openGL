@@ -99,7 +99,7 @@ void Mousefun(int btn, int state, int x, int y)
 }
 void Idlefunc()
 {
-    //the function that continually render the letter.
+    //the function that Continuously render the letter.
     drawLetter();
     if (rotate == 1)
     {
